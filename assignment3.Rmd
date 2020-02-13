@@ -132,6 +132,8 @@ Write a short interpretation of your findings.
 ```{r}
 meanVote6 %>%
       pivot_wider(names_from = wave, values_from = PolInterest)
+
+meanVote6
         
 ```
 
@@ -177,24 +179,22 @@ Stability <- Stability %>%
 StabilityBySex <- Stability %>%
   group_by(sex_dv) %>%
    summarise(Avg.Delta = mean(Delta, na.rm = TRUE))
+StabilityBySex
 
 ## Group delta averages for age
 StabilityByAge <- Stability %>%
   group_by(age_dv) %>%
     summarise(Avg.Delta = mean(Delta, na.rm = TRUE))
+StabilityByAge
 
 ## Graph without polynomial curve
-GraphAttempt1 <- ggplot(data = StabilityByAge, 
-       aes(x = age_dv, 
-           y = Avg.Delta))
+GraphAttempt1 <- ggplot(data = StabilityByAge)+ geom_point(aes(x = age_dv, y = Avg.Delta))
 
 ## With polynomial curve
-GraphAttempt2 <- ggplot(data = StabilityByAge, 
-       aes(x = age_dv, 
-           y = Avg.Delta))+
-  geom_smooth(method = "lm")
-   
-GraphAttempt1                    
+GraphAttempt2 <- ggplot(data = StabilityByAge, aes(x = age_dv, y = Avg.Delta)) +  geom_smooth(method = "lm")
+ 
+GraphAttempt1
+GraphAttempt2                 
 ```
 
 ** Apologies for the messy code I was struggling to find alternative ways to get the right outputs **
