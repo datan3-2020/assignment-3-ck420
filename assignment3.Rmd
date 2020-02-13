@@ -192,7 +192,7 @@ StabilityByAge
 GraphAttempt1 <- ggplot(data = StabilityByAge)+ geom_point(aes(x = age_dv, y = Avg.Delta))
 
 ## With polynomial curve
-GraphAttempt2 <- ggplot(data = StabilityByAge, aes(x = age_dv, y = Avg.Delta)) +  geom_smooth(method = "lm")
+GraphAttempt2 <- ggplot(data = StabilityByAge, aes(x = age_dv, y = Avg.Delta)) +  geom_smooth(method = "lm") + geom_point(aes(x = age_dv, y = Avg.Delta))
  
 GraphAttempt1
 GraphAttempt2                 
