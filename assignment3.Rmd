@@ -26,6 +26,7 @@ The only thing you need to do for this code to work on your computer is to provi
 ```{r}
 library(tidyverse)
 library(data.table)
+
 setwd("C:/Users/conno/Downloads")
 
 # data.table is faster compared to readr so we'll use it in this case (the function fread()). You need to install this package first to be able to run this code.
@@ -133,7 +134,6 @@ Write a short interpretation of your findings.
 meanVote6 %>%
       pivot_wider(names_from = wave, values_from = PolInterest)
 
-meanVote6
         
 ```
 
@@ -180,6 +180,7 @@ StabilityBySex <- Stability %>%
   group_by(sex_dv) %>%
    summarise(Avg.Delta = mean(Delta, na.rm = TRUE))
 StabilityBySex
+
 
 ## Group delta averages for age
 StabilityByAge <- Stability %>%

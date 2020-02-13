@@ -23,33 +23,8 @@ computer.
 
 ``` r
 library(tidyverse)
-```
-
-    ## Warning: package 'tidyverse' was built under R version 3.5.3
-
-    ## Warning: package 'ggplot2' was built under R version 3.5.3
-
-    ## Warning: package 'tibble' was built under R version 3.5.3
-
-    ## Warning: package 'tidyr' was built under R version 3.5.3
-
-    ## Warning: package 'readr' was built under R version 3.5.3
-
-    ## Warning: package 'purrr' was built under R version 3.5.3
-
-    ## Warning: package 'dplyr' was built under R version 3.5.3
-
-    ## Warning: package 'stringr' was built under R version 3.5.3
-
-    ## Warning: package 'forcats' was built under R version 3.5.3
-
-``` r
 library(data.table)
-```
 
-    ## Warning: package 'data.table' was built under R version 3.5.3
-
-``` r
 setwd("C:/Users/conno/Downloads")
 
 # data.table is faster compared to readr so we'll use it in this case (the function fread()). You need to install this package first to be able to run this code.
@@ -247,29 +222,6 @@ meanVote6 %>%
     ##   <chr>  <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
     ## 1 Female  2.84  2.82  2.87  2.89  2.87  2.81  2.73
     ## 2 Male    2.53  2.51  2.54  2.55  2.51  2.47  2.42
-
-``` r
-meanVote6
-```
-
-    ## # A tibble: 14 x 3
-    ## # Groups:   sex_dv [2]
-    ##    sex_dv wave  PolInterest
-    ##    <chr>  <chr>       <dbl>
-    ##  1 Female a            2.84
-    ##  2 Female b            2.82
-    ##  3 Female c            2.87
-    ##  4 Female d            2.89
-    ##  5 Female e            2.87
-    ##  6 Female f            2.81
-    ##  7 Female g            2.73
-    ##  8 Male   a            2.53
-    ##  9 Male   b            2.51
-    ## 10 Male   c            2.54
-    ## 11 Male   d            2.55
-    ## 12 Male   e            2.51
-    ## 13 Male   f            2.47
-    ## 14 Male   g            2.42
 
 In every wave on average males tend to be more interested in politics
 than females (lower average suggests higher interest). We can also see
